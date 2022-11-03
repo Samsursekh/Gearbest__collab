@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* font-family: "Roboto", sans-serif; */
+    background: #f5f5f5;
+}
+
+/* header part */
+#logo{
+    height: 100px;
+    width: 100%;
+    padding-left: 5%;
+    margin-bottom: 25px;
+    /* background-color: aqua; */
+    
+}
+#logo_img{
+    height: 46px;
+    width: 207px;
+    margin: 32px 0px;
+}
+
+/* Register form */
+#bottom{
+    width: 1200px;
+    height: 680px;
+    color: #666666;
+}
+#register{
+    width: 430px;
+    height: 430px;
+    color: #666666;
+    position: absolute;
+    left: 65% ;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#links{
+    display: flex;
+    /* color: gray; */
+    font-size: 20px;
+    /* padding: 36px 40px 0px;     */
+    padding-top: 32px;
+    padding-left:50px;
+    justify-content: space-evenly;
+}
+a{
+    text-decoration: none;
+    color: gray;
+    font-weight: bold;
+}
+a:hover{
+    color: black;
+    text-decoration: underline;
+    /* background: #ffda00; */
+    transition: 1s;
+}
+#register_form{
+    height: 500px;
+    width: 430px;
+    padding-left: 60px;
+    padding-top: 20px;
+    /* padding: 30px 40px; */
+}
+.form_input input{
+    width: 80%;
+    height: 25px;
+    border: 1px solid black;
+    font-size: 15px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.form_input #submit{
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+    width: 80%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size:15px ;
+    background-color: #ffda00 ;
+    color: black ;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+.check_box{
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+.form-input #forget_password{
+    font-size: 16px;
+}
+.form-input span{
+    font-size: 16px;
+}
+.form-input #label{
+    padding-right: 25px;
+}
+.form_input span{
+    font-size: 20px;
+    position: relative;
+    left: 88px;
+}
+#google_link{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    left: 30%;
+}
+
+#google_link{
+    position: relative;
+    left: 34%;
+    margin-top: 14px;
+}
+#details{
+    height: 32px;
+    width: 1200px;
+}
+#details img{
+    height: 40px;
+    width: 76px;
+    position: relative;
+    left: 44%;
+    margin-left: 10px;
+    margin-bottom: 40px;
+}
+p{
+    text-align: center;
+}

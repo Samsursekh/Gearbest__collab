@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="gearBestIcon.jpg" type="image/icon type" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biling Address</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        .header {
+            padding: 22.5px 5%;
+        }
+
+        .header img {
+            width: 207px;
+            height: 45px;
+        }
+
+        hr {
+            opacity: 0.3;
+            margin: 0 auto;
+        }
+
+
+        .heading {
+            width: 100%;
+            height: 50px;
+            margin-left: 5%;
+            line-height: 50px;
+        }
+
+        .main_container {
+            width: 100%;
+            height: 800px;
+            display: flex
+        }
+
+        .details {
+            width: 60%;
+            height: 800px;
+            margin-left: 10%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #labels {
+            width: 22%;
+            height: 100%;
+        }
+
+        #labels>div {
+            width: 100%;
+            height: 5%;
+            margin-top: 35px;
+        }
+
+        #boxes {
+            width: 85%;
+            height: 100%;
+
+        }
+
+        #boxes>div {
+            width: 80%;
+            height: 5%;
+            margin-top: 33px;
+        }
+
+        div>input {
+            width: 98%;
+            height: 90%;
+            font-family: sans-serif;
+            padding-left: 10px;
+
+        }
+
+        div>select {
+            width: 100%;
+            height: 100%;
+            font-family: sans-serif;
+            padding-left: 10px;
+        }
+
+        p {
+            font-size: medium;
+            font-family: sans-serif;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        #check {
+            width: auto;
+            margin: auto;
+        }
+       
+        #cancel {
+            width: 140px;
+            height: 40px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-left: 22.5%;
+            background-color: white;
+            color: black;
+            font-size: large;
+            font-family: sans-serif;
+            font-weight: bolder;
+            border: 1px solid;
+            cursor: pointer;
+        }
+        #cancel:hover{
+            cursor: pointer;
+        }
+
+        #confirm {
+            width: 140px;
+            height: 40px;
+            margin-left: 15px;
+            background-color:#ffda00;
+            color: black;
+            font-size: large;
+            font-family: sans-serif;
+            font-weight: bolder;
+            border: 1px solid 
+#ffda00;
+            cursor: pointer;
+        }
+
+       #confirm:hover {
+            background-color:
+#8f7900;
+        }
+
+        /************************** FOOTER STARTS HERE  ***************************/
+        #container_footer {
+            display: flex;
+            flex-direction: column;
+            width: 1200px;
+            height: 1150px;
+            /* border: 1px solid; */
+            margin: auto;
+
+        }
+
+        #big {
+            width: 1200px;
+            height: 100%;
+            margin: auto;
+            /* border: 2px solid; */
+        }
+
+        #start {
+            width: 100%;
+            height: 80px;
+            /* border: 1px solid red; */
+            display: flex;
+        }
+
+        #search_footer {
+            width: 10%;
+            height: 100%;
+            font-family: sans-serif;
+            /* border: 1px solid blueviolet; */
+            text-align: center;
+            margin-top: 20px;
+
+        }
+
+        #search_list {
+            width: 90%;
+            height: 100%;
+            font-family: sans-serif;
+            /* border: 1px solid blue; */
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #middle {
+            width: 100%;
+            height: 200px;
+            /* margin-top: 50px; */
+            /* border: 1px solid blue; */
+            margin-right: 100px;
+            margin-top: 100px;
+        }
+
+        #mid1 {
+
+            width: 100%;
+            height: 100%;
+            display: grid;
+            margin: auto;
+            display: flex;
+            text-align: center;
+        }
+
+        #mid1>div {
+            width: 20%;
+            height: 100%;
+            /* border: 1px solid green; */
+        }
+
+        #mid1>div>img {
+            width: 100%;
+            padding: 10px 0 0;
+
+        }
+
+        #middle2 {
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100px;
+            margin-top: 30px;
+            display: flex;
+        }
+
+        .div1 {
+            display: flex;
+            align-items: center;
+            width: 50%;
+            height: 100%;
+        }
+
+        .div2 {
+            margin-left: 10%;
+            width: 50%;
+            height: 100%;
+            /* border: 2px solid; */
+        }
+
+        .social_icons {
+            display: flex;
+            width: 30%;
+            height: 45%;
+            /* border: 1px solid red; */
+            margin: auto;
+            margin-top: 53px;
+        }
+
+        .img_icons {
+            margin-left: 10px;
+        }
+
+        #bottom1 {
+            width: 100%;
+            height: 400px;
+            margin-top: 40px;
+            /* border: 1px solid purple; */
+            display: flex;
+        }
+
+        #bottom2 {
+            width: 100%;
+            height: 100px;
+            margin-top: 30px;
+            /* border: 1px solid red; */
+            display: flex;
+            padding-top: 80px;
+            gap: 20px;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        #border_base {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            margin: auto;
+            margin-top: 10px;
+            width: 1200px;
+            height: 50px;
+            padding-top: 10px;
+            /* border: 3px solid red; */
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+
+        .p_footer {
+            padding: none;
+            margin-top: -10px;
+            margin-left: 50px;
+            width: 140px;
+            font-family: sans-serif;
+            color: gray;
+            font-size: 12px;
+        }
+
+        h4 {
+            font-family: sans-serif;
+        }
+
+        h4:hover {
+            color: rgb(245, 230, 23);
+            cursor: hand;
+        }
+
+        h5 {
+            text-align: center;
+            margin-top: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .newsletter {
+            display: flex;
+            margin: 50px auto;
+            justify-content: space-between;
+            height: 50%;
+            font-family: sans-serif;
+        }
+
+        .div2>img {
+            margin-top: 20px;
+        }
+
+        .input_footer {
+            width: 350px;
+            height: 90%;
+            font-family: sans-serif;
+            margin-left: 15px;
+            border: 1px solid;
+        }
+
+        .button_footer {
+            width: 25%;
+            height: 100%;
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            border: 1px solid black;
+
+        }
+
+        button:hover {
+            background-color: rgb(138, 133, 133);
+            cursor: pointer;
+        }
+
+        .icon-fb:before {
+            content: "\E676";
+        }
+
+        #img {
+            margin: 30px 0 0 15px;
+        }
+
+        .list_footer {
+            font-size: 12px;
+            color: #666666;
+            width: 25%;
+            height: 100%;
+            /* border: 1px solid dodgerblue; */
+        }
+
+        #info>h3 {
+            font-size: 14px;
+            margin-left: 15px;
+        }
+
+
+        #service>h3 {
+            font-size: 14px;
+            margin-left: 15px;
+        }
+
+        #other>h3 {
+            font-size: 14px;
+            margin-left: 15px;
+        }
+
+        .qrscanner>img {
+            margin-left: -15px;
+            justify-content: left;
+            display: flex;
+        }
+
+        #download_app {
+            margin-left: -20px;
+        }
+
+        .footer_h4_title {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .footer_h5_title {
+            margin-top: 10px;
+            margin-left: 40px;
+            font-family: sans-serif;
+            color: #000;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 18px;
+        }
+
+        /******************** FOOTER ENDS HERE **********************/
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="/index.html">
+            <img src="https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png?imbypass=true"
+                height="50" alt="Gearbest">
+        </a>
+    </header>
+    <hr>
+    <h1 class="heading">Address</h1>
+    <div class="main_container">
+        <form class="details">
+            <div id="labels">
+                <div>
+                    <p>First Name:</p>
+                </div>
+                <div>
+                    <p>Last Name:</p>
+                </div>
+                <div>
+                    <p>Address Line 1:</p>
+                </div>
+                <div>
+                    <p>Address Line 2:</p>
+                </div>
+                <div>
+                    <p>Country/Region:</p>
+                </div>
+                <div>
+                    <p>State/Province:</p>
+                </div>
+                <div>
+                    <p>City:</p>
+                </div>
+                <div>
+                    <p>ZIP/Postal Code:</p>
+                </div>
+                <div>
+                    <p>Phone NUumber:</p>
+                </div>
+                <div>
+                    <p>E-mail Address:</p>
+                </div>
+            </div>
+          
+                <div id="boxes">
+                    <div>
+                        <input id="name" type="text" placeholder="Enter Name" required>
+                    </div>
+                    <div>
+                        <input id="last_name" type="text" placeholder="Last Name" required>
+                    </div>
+                    <div>
+                        <input id="address" type="address" placeholder="Line 1" required>
+                    </div>
+                    <div>
+                        <input type="address" placeholder="Line 2">
+                    </div>
+                    <div>
+                        <input id="country" list="country" name="country" class="datalist-input" required>
+                    </div>
+                    <div>
+                        <input name="state" type="text" id="state" class="form-control" required>
+                    </div>
+                    <div>
+                        <input id="city" type="text" placeholder="City" required>
+                    </div>
+                    <div>
+                        <input id="pcode" type="number" placeholder="" required>
+                    </div>
+                    <div>
+                        <input id="mbl" type="number" placeholder="Enter Mobile No." required>
+                    </div>
+                    <div>
+                        <input id="email" type="email" placeholder="E-mail address" required>
+                    </div>
+                </div>
+    
+                
+            
+        </form>
+        
+    </div>
+    <div >
+        <button id="cancel">Cancel</button>
+        <button id="confirm">Confirm</button>
+    </div>
+    
+
+
+     <!--  -->
+     <div id="container_footer">
+        <div id="big">
+         <div id="start"> 
+        </div>
+        <div id="middle">
+            <div id="mid1">
+                <div>
+                    <img class="img_icons"src="https://css.gbtcdn.com/imagecache/gbw/img/site/new-logo.png" alt="logo">
+                    <h5 class="footer_h5_title">AFFORDABLE QUALITY FUN SHOPPING</h5>
+                </div>
+                <div>
+                    <img class="img_icons"style="width: 50px; height: 50px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAyCAMAAADGIxO9AAABAlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADg4OAAAAAAAAAAAAAAAAAAAAAAAADg4OAAAAAAAAAAAAAAAAAAAADg4OAAAADg4OAAAAAAAAAAAAAAAAAAAADk5OQAAAAAAADo6Oj///8AAADg4OAlJSUAAADg4OAaGhrg4ODg4ODg4OAAAADg4ODg4OAAAADh4eEAAADh4eHh4eHk5OQAAAAAAAAAAADg4OA4ODgeHh7Nzc0oKCgQEBAJCQnb29vExMSamppLS0sTExO/v7+zs7OoqKigoKB9fX1wcHBaWloYGBg9pae4AAAAQXRSTlMAgECHYZ94/h7swLwEAblL9/Hfx8e0r6eOfGNZVDcsE/TPe3drUkg8KSYZCwXt6+bm39nTu6ecmo2ETEc8MxMLCQmnFe4AAAFdSURBVEjH7ZTXbsIwFIbtAiUkJOxd9i50793/hLaU7vX+r1IzokCx1WukfBeRfXQ++eiPbObhsYRZXJPRvmVqcpBjqJVwCAq6SmcD2NL3bfsFA/EZ2vaPWOzocSCrdCygzg7ocYgR0QPu6AP3VOm1gVhYoWhBBMtXRE+ic+oI+5XyLA4UFI4PSLMTom98zRx6xiclWB0w1AlEehVxzmBEon182PvgjahTFgNoqgR2zTwtc8pSgE/qGABnCYmz3W8CIVORwCY7kjiJ/mRseQKWs87v0ZjDS6eQBVLyBJrutlOrnV+72y7EELIEgmd8QsutmgU+JQbkJAm4ZJxgS0m4xJdSiGGOoOUXV6CRxALlv06RcwPQxRhpzJOZVqqcR5iE9dmfKx1HHaM6afQDASZQO4KbCx7QdStXZIL/nUU8Z8UdP5DkMlLqR1GLQkmLKSgopQxTovm5jEaJeawOv0IPd8P/1V/7AAAAAElFTkSuQmCC" alt="">
+                    <h4 class="footer_h4_title">High Quality Selection</h4>
+                    <p class="p_footer">Total product quality control for peace of mind</p>
+                </div>
+                <div>
+                    <img class="img_icons"style="width: 50px;height: 50px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAABIFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADi4uIAAAAAAAAAAAAAAAAAAAAAAADg4OAAAAAAAADh4eEAAAAAAADg4ODg4OAAAAAAAAAAAAAAAAAAAADg4OAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADi4uLf39/f399paWkAAADg4OAAAAAAAADg4OAAAAA7OzsAAADg4OCZmZng4OAUFBQAAAAAAADg4ODg4OAAAADa2toAAAAAAAAAAADk5OQAAADg4OBwcHDExMRPT0+lpaWVlZWLi4s4ODgxMTElJSUJCQkHBwfY2NjLy8u+vr6xsbFbW1s8PDwYGBgODg61tbWpqamDg4NtbW1paWlKSkpISEhFRUUimxvjAAAAQ3RSTlMAgPbwl1/8tqJxQC8fGATi0cTAZ1Q7EAr37uvf2dWrqZyGeXRqSjkxJx758O/o383Jx7Csp6SjjYyMeGpTT0Q0KRoTY8WDigAAAZ5JREFUSMft1NdOG0EUgOHj8a4LMe4loYYO6b33f1gTNwgESM/7v0V2BjsGYTPDHUj8N3u00qcj7YxWrrpUTYaVtXOB3FwKKFT9xWqSo5Z8RX4aVJA2bsKTLMN0LpZPYNaT3ISKxDUUfPAjJVi1Qxre+pECRLpcs+uyfkcCPa31rZokIOFF5uCvjisbsugB6gHwTZs2MvS7m/k4XoQK+KpttRL/U+E4sc5Q6HeKQWNONVvIShaKz3S/a8M7NwPFESSFkgQ81oM2jn3FJLw/TQBDNgciYs88bs+bbRkIXST6fcjhny9mvBGbBXjlIh3oQtPOZbul4iLbEHU50HaNyAysuchBPLVaW3a+LnVQ4iK/gM6utj2UFSg5yc4+sP3Zzs/N+5cOYvrRi439ZG8kDVUnabbbe4Bd80mSkHOSLuz0jsg9WYcpcW+BFhDF41MJ4ZGb7HYAfprxtQSw6CC2LZrf+zf6Pkz4EL0/OMjJFKmGmwybz6fhgZxB2psnu/NiduyfVqGkyugWZGRBMpB8kRFNLcsZ1ROnWlppyFUXv3/1lqnU6lgCKQAAAABJRU5ErkJggg==" alt="">
+                    <h4 class="footer_h4_title">Affordable Price</h4>
+                    <p class="p_footer">Factory direct prices for maximum savings</p>
+                </div>
+                <div>
+                    <img class="img_icons"style="width: 50px; height: 50px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAA0lBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEAAAAAAAAAAAAAAAAAAAAtLS0AAAAAAAAAAAAAAAAAAAAAAADf398AAAAAAADg4OAAAAAAAADg4OAAAAAAAADg4ODf39/g4OArKysAAAAdHR0AAAAAAADi4uIAAADf398AAADm5uYAAAAAAADg4OD///9OTk5wcHDX19f+/v5qamr5+fmMjIwkJCQcHBwBAQHa2tpWVlZBQUEWFhbq6urBwcG5ubmnp6eWlpZSUlI4ODgqKiofnaNsAAAALXRSTlMA6vqngF3z8JhyPhMF5bagXtnAhGlEQDco6m78887KvKiioJ2UjFY0LxgYFAh5lWYlAAABTUlEQVRIx+2U126DQBBFFwwu2CbuJb33awhg4pJe/v+XwoiNsoJJBEiRXzgPPNyrsyM0sKKkpCDXtgYWzW7yRrONX2nzTgV/UGEVDRgLljHQZgsAvMFXxZWD3VmC6dFVXPV6Pfvs/DalzBgOqfqme5lFmaoK9GFS4Ygry7KGgz3aUGZFEC0bGGRWRqPRxQ1tqJJVoertHhFaHiUyiDwKYv51Cr1LboXYoLIK3Y/1S0qRGaeEjyDeV4piQmZJRQe8WQCJ+6P0lUwqjSpQbYgu8LBG9HgNF9TfSU7UDNBJqcWfTl0e5TvO3IUknXWVKc19EJ4T4UFFzXZMoTJsAEufan8JHG9FnBqGmhmDiUhQkyc+AzU+k9R1EHqdbkx37jhPn8qvxGWiihhNTCJ5EQS0G0uWXKZOEduQ9IWEz1Q6Gmheh894WqZhmC02KynIF2/ZrSepltS8AAAAAElFTkSuQmCC" alt="">
+                    <h4 class="footer_h4_title">Express Shipping</h4>
+                    <p class="p_footer">Fast, reliable delivery from global warehouse</p>
+                </div>
+                <div>
+                    <img class="img_icons"style="width:50px; height: 50px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAA0lBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEAAAAAAAAAAAAAAAAAAAAtLS0AAAAAAAAAAAAAAAAAAAAAAADf398AAAAAAADg4OAAAAAAAADg4OAAAAAAAADg4ODf39/g4OArKysAAAAdHR0AAAAAAADi4uIAAADf398AAADm5uYAAAAAAADg4OD///9OTk5wcHDX19f+/v5qamr5+fmMjIwkJCQcHBwBAQHa2tpWVlZBQUEWFhbq6urBwcG5ubmnp6eWlpZSUlI4ODgqKiofnaNsAAAALXRSTlMA6vqngF3z8JhyPhMF5bagXtnAhGlEQDco6m78887KvKiioJ2UjFY0LxgYFAh5lWYlAAABTUlEQVRIx+2U126DQBBFFwwu2CbuJb33awhg4pJe/v+XwoiNsoJJBEiRXzgPPNyrsyM0sKKkpCDXtgYWzW7yRrONX2nzTgV/UGEVDRgLljHQZgsAvMFXxZWD3VmC6dFVXPV6Pfvs/DalzBgOqfqme5lFmaoK9GFS4Ygry7KGgz3aUGZFEC0bGGRWRqPRxQ1tqJJVoertHhFaHiUyiDwKYv51Cr1LboXYoLIK3Y/1S0qRGaeEjyDeV4piQmZJRQe8WQCJ+6P0lUwqjSpQbYgu8LBG9HgNF9TfSU7UDNBJqcWfTl0e5TvO3IUknXWVKc19EJ4T4UFFzXZMoTJsAEufan8JHG9FnBqGmhmDiUhQkyc+AzU+k9R1EHqdbkx37jhPn8qvxGWiihhNTCJ5EQS0G0uWXKZOEduQ9IWEz1Q6Gmheh894WqZhmC02KynIF2/ZrSepltS8AAAAAElFTkSuQmCC" alt="">
+                    <h4 class="footer_h4_title">Worry-free After-sales</h4>
+                    <p class="p_footer">Instant access to professional support</p>
+                </div>
+            </div>
+        </div>
+            <div id="middle2">
+                <div class="div1">
+                  <div class="newsletter">
+                      <h4 style="color: gray;">Newsletter</h4>
+                      <input class="input_footer" type="text" name="E-mail" placeholder="Enter email  to get 50 points">
+                      <button class="button_footer">Subscribe</button>
+                  </div>
+                </div>
+                <div class="div2">
+                    <img src="images/social_icons.png" alt="">
+                </div>
+            </div>
+            <div id="bottom1">
+                <div class="list_footer">
+                    <div id="info">
+                        <h3>Company Information</h3>
+                        <p style="margin-left: 15px;">About Us</p>
+                        <p style="margin-left: 15px;">Top Searches</p>
+                        <p style="margin-left: 15px;">Privacy Policy</p>
+                        <p style="margin-left: 15px;">Terms and Conditions</p>
+                        <p style="margin-left: 15px;">Intellectual Property Policy</p>
+                        <p style="margin-left: 15px;">Testimonials</p>
+                        <p style="margin-left: 15px;">Contact Us</p>
+                        <p style="margin-left: 15px;">Report Security Issue</p>
+                        <p style="margin-left: 15px;">Sell on Gearbest</p>
+                        <p style="margin-left: 15px;">Cookies Policy</p>
+                        <p style="margin-left: 15px;">Top Brands</p>
+                        <p style="margin-left: 15px;">Gearbest Official Blog</p>
+                    </div>
+                </div>
+                <div class="list_footer">
+                    <div id="service">
+                        <h3>Customer Service</h3>
+                        <p style="margin-left: 15px;">Shipping Information</p>
+                        <p style="margin-left: 15px;">My Favorites</p>
+                        <p style="margin-left: 15px;">My Favorites</p>
+                        <p style="margin-left: 15px;">FAQ For Newsletter Subscription</p>
+                        <p style="margin-left: 15px;">My Points</p>
+                        <p style="margin-left: 15px;">Warranty and Return</p>
+                        <p style="margin-left: 15px;">Payment Methods</p>
+                        <p style="margin-left: 15px;">Deposit Expansion</p>
+                        <p style="margin-left: 15px;">FAQ & Support</p>
+                        <p style="margin-left: 15px;">Sitemap</p>
+                        <p style="margin-left: 15px;">Gearbest Wallet Instruction</p>
+                        <p style="margin-left: 15px;">FAQs about COVID-19</p>
+                    </div>
+                </div>
+                <div class="list_footer">
+                    <div id="other">
+                        <h3>Other Business</h3>
+                        <p style="margin-left: 15px;">Partnership Programs</p>
+                        <p style="margin-left: 15px;">Associate Program</p>
+                    </div>
+                </div>
+                <div class="list_footer">
+                    <div id="download_app">
+                        <h3>Download App!</h3>
+                        <span>Save $3 with App & New Users Only</span> 
+                        <div class="qrscanner">
+                            <img src="images\Gearbest_App_QRCODE.png" alt="" class="src">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="bottom2">
+                <img src="images/partners.png" alt="" class="src">
+            </div>
+        </div>
+    </div>
+    <div id="border_base">
+        <h5>Copyright © 2014-2022 Gearbest.com. All Rights Reserved.</h5>
+    </div>
+    <!--  -->
+</body>
+
+</html>
+<script src="./scripts/checkout.js">
+    
+    
+</script>

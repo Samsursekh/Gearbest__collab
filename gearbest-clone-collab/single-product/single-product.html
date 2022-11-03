@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Gearbest Product Details</title>
+    <link rel="stylesheet" href="./single-prod.css">
+    <script src="https://kit.fontawesome.com/322ae09457.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon"
+        href="data:image/png;base64,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">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="/index.html">
+                <img src="https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png" alt=""
+                    width="200" height="60">
+            </a>
+            <ul>
+                <div class="cart-box">
+                    <div class="cart-icon">
+                        <a href="./cart/cart.html"> <i class="fas fa-cart-arrow-down fa-2x non-empty"></i></a>
+                       
+                    </div>
+                    <div class="whole-cart-window">
+
+                    </div>
+                    
+                </div>
+            
+                <!-- <a href="#" class="dropdown">Ship TO USA/USD</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="#">Mission</a></li>
+                        <li><a href="#">Vision</a></li>
+                        <li><a href="#">Teamn</a></li>
+                    </ul>
+
+                </div>
+            </ul> -->
+           
+           <!-- <a href="#">Ship TO USA/USD</a> -->
+                <!-- <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
+                  <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
+                </ul>  -->
+        </div>
+    </nav>
+    <hr>
+    <div id="nav-down">
+        <div class="nav1">
+        <div class="text-nav">
+            <p>
+                Home > Consumer Electronics >
+ Smart Electronics >
+ Smart Watches
+            </p>
+            </div>
+            <div class="nav2">
+                <span class="text-nav">Store : </span>
+                <span class="top">Top Rate Store</span>
+                <span>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fa-solid fa-star-half"></i>
+                    4.5
+                </span>
+            </div>
+        
+
+    </div>
+    </div>
+    <!-- header navbar -->
+
+
+    <!-- product detail section -->
+
+    <section id="prodetails" class="section-p1">
+        <div class="single-pro-image">
+            <img src="https://gloimg.gbtcdn.com/soa/gb/item/6615272824267153408/15977/goods_img_big-v3/c4539122a15e.jpg"
+                alt="" width="100%" id="MainImg">
+
+            <div class="small-img-group">
+                <div class="small-img-col">
+                    <img src="https://gloimg.gbtcdn.com/soa/gb/item/6615272824267153408/15972/goods_img_big-v3/c74d0a0a0f8c.jpg"
+                        alt="" width="100%" class="small-img">
+                </div>
+                <div class="small-img-col">
+                    <img src="https://gloimg.gbtcdn.com/soa/gb/item/6615272824267153408/15972/goods_img_big-v3/f232214fdcca.jpg"
+                        alt="" width="100%" class="small-img">
+                </div>
+                <div class="small-img-col">
+                    <img src="https://gloimg.gbtcdn.com/soa/gb/item/6615272824267153408/15972/goods_img_big-v3/ed4c3d900a87.jpg"
+                        alt="" width="100%" class="small-img">
+                </div>
+                <div class="small-img-col">
+                    <img src="https://gloimg.gbtcdn.com/soa/gb/item/6615272824267153408/15972/goods_img_big-v3/a32db8320130.jpg"
+                        alt="" width="100%" class="small-img">
+                </div>
+
+            </div>
+
+
+
+
+            <!-- social icons -->
+            <div class="social-menu">
+                <div>
+                    <h2>Follow Us On : -</h2>
+                    <br>
+                    <span>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                            <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+
+                        </ul>
+                    </span>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+        <!-- product details description -->
+
+
+
+        <div class="single-pro-details">
+            <h2>HUAWEI WATCH GT Elegant Edition Smart Sport Watch 1.39 inch AMOLED Colorful Screen Heartrate GPS
+                Swimming Jogging Cycling SleepWatch - Elegant White</h2>
+            <div class="star">
+                <span> <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fa-solid fa-star-half"></i></span>
+                <span class="text-star">455 Customer Reviews</span>
+
+            </div>
+
+            <div class="price">
+                <div>
+                    <span class="price-head">Price :</span>
+                    <span class="price-money">$99.95</span>
+                </div>
+                <div class="coupon">
+                    <span class="price-head">Coupons :</span>
+                    <span>
+                        <button class="offer">$1 OFF Over $10.00</button>
+                        <button class="offer">$1 OFF Over $10.00</button>
+                        <button class="offer">$1 OFF Over $10.00</button>
+                        <span class="view"> <a href="#">View More<i class="fa-solid fa-angle-down"></i></a></span>
+                    </span>
+                </div>
+            </div>
+
+            <div id="shipp-add">
+                <span class="price-head">Shipping : </span>
+                <span>
+                    <a href="#"> <span class="doller">$8.99</span> to United States Via Unregistered Air Mail<i
+                            class="fa-solid fa-angle-down"></i></a>
+                </span>
+                <div class="shipping">
+                    <span class="shipp-head">Ship between:</span>
+                    <span class="doller">Jun 20 - Jun 24,</span>
+                    <span class="shipp-head">Estimated Shipping Time:</span>
+                    <span class="doller"> 15-45 business days </span>
+                </div>
+            </div>
+
+
+            <div id="color">
+                <span class="price-head">Color : </span>
+                <span>
+                    <button class="color-name">Elegant White</button>
+                    <button class="color-others">Elegant White n Film</button>
+                    <button class="color-others">Elegant Black</button>
+                    <button class="color-others">Elegant Black n Film</button>
+                </span>
+            </div>
+
+            <div id="qty">
+                <span class="price-head"> QTY : </span>
+                <span>
+                    <input type="number" value="1">
+                </span>
+                <span class="text-stck">In Stock</span>
+            </div>
+
+
+
+            <div id="cart-buttons">
+                <button class="cart" onclick="addtocart()">Add to cart</button>
+                <!-- <button class="cart"> <a href="./cart/cart.html">Add to cart</a></button> -->
+                <button class="buy">Buy Now</button>
+                <button class="paypal"><i class="fa-brands fa-paypal"></i>Paypal</button>
+            </div>
+            <div class="fav">
+                <span> <i class="fa-solid fa-heart"></i></span>
+                <span class="text"><a href="#">Add to Favorites(13)</a></span>
+            </div>
+
+
+            <div id="desc-icons">
+                <span>
+                    <button><img src="https://css.gbtcdn.com/imagecache/gbw/img/site/paypal@.png" alt=""></button>
+                    <button><img
+                            src="https://uidesign.gbtcdn.com/GB/images/others/GB_brandpic/mm/VISA.png?imbypass=true"
+                            alt=""></button>
+                    <!-- <button><img src="https://uidesign.gbtcdn.com/GB/images/others/GB_brandpic/mm/mc_vrt_opt_pos_73_2x.png?imbypass=true" alt=""></button> -->
+
+
+                    <span class="reports"> <i class="fa-solid fa-pen"></i>Report Problems</span>
+                    <span class="disc-price"><i class="fa-solid fa-circle-info"></i>Price Disclaimar</span>
+
+                </span>
+            </div>
+        </div>
+    </section>
+    <br> <br><br><br><br>
+
+
+    <!-- product details section ends here -->
+
+
+
+    <section id="product1" class="padd">
+        <h2>Recommended for You</h2>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="https://gloimg.gbtcdn.com/soa/gb/item/6615272824267153408/16100/goods_img-v1/6ad0e9483504.jpg"
+                    alt="">
+                    <div class="des">
+                        <h5>Amazfit X Smartwatch Global Version Curved</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$359.99</h4>
+                    </div>
+
+
+            </div>
+            <!-- 2 -->
+            <div class="pro">
+                <img src="https://gloimg.gbtcdn.com/soa/gb/item/6615272824267153408/15949/goods_img-v1/a89a81bcf40c.jpg"
+                alt="">
+                    <div class="des">
+                        <h5>KOSPET Prime 3GB 32GB Smart Watch Men</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$219.99</h4>
+                    </div>
+
+
+            </div>
+            <div class="pro">
+                <img src="https://gloimg.gbtcdn.com/soa/gb/item/6615272824267153408/16158/goods_img-v5/6298be56d35f.jpg"
+                 alt="">
+                    <div class="des">
+                        <h5>New Amazfit GTR 2 Smartwatch 14-day</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$225.99</h4>
+                    </div>
+
+
+            </div>
+            <div class="pro">
+                <img src="https://gloimg.gbtcdn.com/soa/gb/item/6615272824267153408/15948/goods_img-v1/b2937dc23b2c.jpg"
+                 alt="">
+                    <div class="des">
+                        <h5>Zeblaze THOR 5 PRO 4G LTE Smart Watch Quad</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$175.98</h4>
+                    </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- gearbest about section -->
+    <div id="box-sdw">
+
+    </div>
+    <div id="main-div">
+        <div class="red-div"><img src="https://css.gbtcdn.com/imagecache/gbw/img/site/new-logo.png" id="g-logo">
+            <div class="logo-text">
+                <h5>AFFORDABLE QUALITY
+                    FUN SHOPPING</h5>
+            </div>
+        </div>
+
+
+        <div class="red-div"><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAyCAMAAADGIxO9AAAA4VBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/2gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/3QAAAAD/2gD/2QAAAAAAAAD/2gAAAAAAAAAAAAAAAAAAAAAAAAD/2gAAAAAAAAAAAAD/2wAAAAAAAAAAAAAjHwAgHAD/2gAAAAAAAAD/2QD/2wD/2wD/2wD/2gD/2wD/2gAAAAAAAAAAAAD//wAAAAD/2gA+NQARDwDryQDyzgCqkQCkjAApIwDaugCdhgCQewBYSwBKPwBEOgAnIQAjHgAqjRrHAAAAOnRSTlMAgIJAwPs58wRYJbytm2TsxrWNbRAPCvnm49nT0bChhnZybl1PSEY0Gfff3NqppaN+d3E+ODArKCAB2KLT2wAAAVBJREFUSMft1Ndug0AQheFZTDO2ce9xr+m9ncUlTs/7P1BwQThiR8qtJb4LBIIf0IiFYrEoM6Fi2sTToJbhE9tiGqPENkkgq5963gwrfzNb73x7J3odKLKNDvToTC6AuZSAlG/4lLXnAdDgEmf9ErdSvsCT22YOLOS4YgETpikA53Qp5Qfed430sJRpyrBTsLPAqFz1n/MzX1/+5W+Wq1dZLZuAVeEmUKe+jLqhBuAqmxQgqKlomtQDctwEppRWNGkqGYCjnkA+2O/Xthff004LKKgnMAwP766ux+XwcAhYtmoC0MRGYu9OrtjQACQVEwi1p8FnfoRQKtJY2GPkk/4S6O4XgBVdOULogC6EaP1dBiI4YZKCADTyTdpGUOjmblkJ8vGNrzLqXKT0fPeB6L9NKG4OvCkCOaGS43+KjgHWIzEGx2B0iPXkChXXodjh+AX+eGkWL9LrtQAAAABJRU5ErkJggg==">
+
+            <h4>High Quality Selection</h4>
+            <div class="logo-text">
+
+                <p>Total product quality control for peace of mind</p>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="red-div"><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAzFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABpaWkAAAA7OzuZmZkAAAAUFBQAAAAAAAAAAAD/2gBwcHA4ODgHBweVlZWLi4tPT08LCwtbW1tGRkYwMDAmJiYSEhKDg4NtbW1paWlRUVFKSko+Pj40NDQkJCQbGxt7jZPnAAAALXRSTlMAgPZxaBj84tKifndADwbv6sS2mZZeVDIn8tzXy66phmFJOSAe77iso52MjE3+skA7AAABYElEQVRIx+3U11ICMQBA0ZBduiBdpIPYvaFLsev//5OLW1Rm18Q3neG+JC9nMikTse9fFa/aR78CJ50EkKyZi8EhbllTkU+CLJe27sCQ2NAYOmMHmobkEmzhlJNQNyNFGIhtJbgxI0lQTkKUwTK7EpioD5OBmBFpw9IjZsecqwDKLY1XIR2PFlUJ3HqkSJDsRYk6gXCS+EXcqpW0hAWpC+X3+eaakAohCaSIwbnaJU7xQwh52cCWjALBF5qGnpY8bVgsA9OFrI68wBrmPkmDrSMTUGs2PmkY7OUNRrOZ8kgOpNCRB2ClfNKHopaoZ2Ay9UgMrvVE3S0c45EzqGnJfDxWwNQlxzDUkldQC4+IOhSEfhWYAe4iVWjriVoB3LukAlk9ceLRP+MWHBiRsT+JJ0jkTUhQvgQtEUUyMB597/QqFfnTSqSoEV5XhFY5LguRIqSC/eOflIntZvXzYt/f7x3alnZnDWwXhgAAAABJRU5ErkJggg==">
+            <h4>Affordable Prices</h4>
+            <div class="logo-text">
+                <p>Factory direct prices for maximum savings</p>
+            </div>
+        </div>
+
+
+        <div class="red-div"><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAA2FBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAyKgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/2wAAAAD/2gAAAAAAAAAAAAAAAAD/3QB8agD/2QAAAAAAAAAAAAD/2QD/2QD/2QAAAAAiHQAAAAAEBAAAAAD/3QAAAAAAAAAAAAD/2gD///9/bADX19dYSwD5+flpaWlNTU0cHBz40wAoIwDq6urBwcGnp6eLi4tOTk5BQUEqKioXFxfTtACrkgCgiQBiVABdUAA/NgBhUwBKPwAXFADTWPdVAAAAK3RSTlMA+/Lnp4BdPQagmGsV7HFewIREQCvozLmzNRb68NvY1ryoop2UjHRWNCUOlYH7PgAAAU1JREFUSMftlMduwkAURcc2LsGY3tN7uQyd9Ebq//9R3jBGWJ5xZIgiNpwVOlfHTyxstmHDiuSaAbQEzVxCYSERS99k8AsZbUJHWkyLS2e0AwBVqtPfk4OdTozaUVtOxWKxcXruKUlHw6GcJHvVNEktmsAoq4mKnFzXLft1wLpKnTCB1wD81EmlUrlosxaQSZfI6fUaRLBMQoVgmQSS/71C/2XJRLLGZDLtf7y9KAm5pGT6DcH7JJI4CF08MYBJp4uQ/iIpLdw8yZuAmWe7wNcnqce7+7HYu5Lt46gDDJGYICyWxYwR53wwQojq9iNXcvWZ6nGihzlxZzgsSvmMHJ9BP7YEJ7YddbZ/yWKY4RNv6W6yI7KGvJkVX8yHAec3T4tXSXXyOZKAVSkeD4fP4mVnkphTrjAfIaX5qDiFggXCKuidHs+xbcfTug0r8gP1CKVK/h6nrwAAAABJRU5ErkJggg==">
+            <h4>Express Shipping</h4>
+            <div class="logo-text">
+                <p>Fast, reliable delivery from global warehouses</p>
+            </div>
+        </div>
+
+
+        <div class="red-div"><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAA9lBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWFhYDAwMAAAAAAAAAAAA7Ozs8PDwNDQ2Tk5MXFxcMDAw0NDRhYWEAAAAAAAAAAAAAAACOjo45OTkAAAD/2gCMjIyGhoaCgoJkZGRLS0tCQkKUlJRHR0c/Pz81NTUUFBQKCgqbm5t7e3tubm5eXl5bW1tTU1M4ODguLi4fHx/6A1CMAAAAO3RSTlMA/fHnKPSnfu7rMQgF+HJjPTfisqyhjXdUIQvX0c3HwGxpSC0kGxgT+N1NMw/99t64tbGwrpqZiEItKPaVQyMAAAG2SURBVEjH7ZTXUuMwFEDl2HGKnd57Qgl1e9+jhCQsZfvu//8MtgyZwQgRv8EM58GjkXXmSle6VzzzpNgtTTrJjL0q2LuJlCZAI4kxLQBYSbb2Ef69ADfB2S2QEnA2VhrwV8oV1Dc1OiqICpPfUHHhLFS+QW0zwwGkwoKKMOM77czbVxasImUJ1kE903Z8/X0X3b4FEfKam4lCr96axo1ujjUXv26UxQVrsnsxpQRg/T9bzGWM+WK1r6IVNUrLk/fglzSKV4VCWegNcZQG+1jE2MlBuiK0xnYKUtua6widI6ExnGxg6N5B9Me540TxtYZQ8XM7caNjqx3fQz5w7GDZyalUnM6k/Fo1GYGThpdyBuehcQ5z+UZl0kAGfssT4HK5vARm8h00hYkP8EO9+og/Ur5/qJ5H8D08zD4hP4PhaxgYFRuiPJUn4/IXNYSCyfDACoWAylbwCZUUTA1KHnpK+DyCYSQNwZSxdlTtW0MUg8OoE5TMOW6KwwFAKgvQb4dzn8wNzO0DZDPH3ZaSeg1zO6uhyLW6qriLNoqReWNgF711Bsc2mK/fd6mOvVszkwNqvnjm8XMF4YCBbG4n4rYAAAAASUVORK5CYII=">
+            <h4>
+                Worry-free After-sales </h4>
+            <div class="logo-text">
+                <p>Instant access to professional support</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- News letter start -->
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign UP for NewsLetter</h4>
+            <p>Get email updates about our latest shop and <span class="newtext">Special offers</span></p>
+        </div>
+
+
+        <div class="form">
+            <input type="text" placeholder="Enter email to get 50 points">
+            <button>Sign UP</button>
+
+        </div>
+
+    </section>
+    <!-- newsletter section ends here -->
+
+
+
+    <!-- footer part starts here -->
+    <footer class="section-p1">
+        <div class="col">
+            <h4>Company Information</h4>
+            <a href="#">About Us</a>
+            <a href="#">Top Searches</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Term And Conditions</a>
+            <a href="#">Testimonials</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Report Us</a>
+            <a href="#">Cookies Policy</a>
+            <a href="#">Top Brands</a>
+            <a href="#">Sell On Gearbest</a>
+        </div>
+
+        <div class="col">
+            <h4>Customer Service</h4>
+            <a href="#">Shipping Information</a>
+            <a href="#">My Favorites</a>
+            <a href="#">Faq</a>
+            <a href="#">My Points</a>
+            <a href="#">Warranty and Return</a>
+            <a href="#">Payment Method</a>
+            <a href="#">Sitemap</a>
+            <a href="#">Deposit Expansion</a>
+            <a href="#">FAQs about COVID-19</a>
+        </div>
+
+        <div class="col">
+            <h4>Other Business</h4>
+            <a href="#">Partnership Programs</a>
+            <a href="#">Associate Programs</a>
+        </div>
+
+
+        <div class="col install">
+            <h4>Download App!</h4>
+            <p>Save $3 with App & New User Only</p>
+
+
+
+            <div id="barcode">
+                <div>
+                    <img src="https://css.gbtcdn.com/imagecache/gbw/img/app-download-qrcode.247877b.png" id="brcd">
+                </div>
+
+
+
+                <div id="app-str">
+                    <div><a
+                            href="https://apps.apple.com/cn/app/gearbest-shopping/id1131090631?_branch_match_id=360600760869311866&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT09NLEpKLS7RSywo0MvJzMvWL0guyS%2FIzC8GAPfJDt4iAAAA&l=en"><img
+                                src="https://css.gbtcdn.com/imagecache/gbw/img/apple-store.f9fad9d.png"></a></div>
+                    <div><a
+                            href="https://play.google.com/store/apps/details?id=com.globalegrow.app.gearbest&_branch_match_id=967405967677080888&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT09NLEpKLS7RSywo0MvJzMvWL0guyS9IzEspys9MAQBlyU0NJgAAAA%3D%3D"><img
+                                src="https://css.gbtcdn.com/imagecache/gbw/img/google-play.c7f6860.png"></a></div>
+                </div>
+            </div>
+            <!-- <div class="apps">
+                    
+                    <img src="./img/pay/app.jpg" alt="">
+                    <img src="./img/pay/play.jpg" alt="">
+                </div>
+                
+                <p>Secure Pyment Gateways</p>
+                    <img src="./img/pay/pay.png" alt=""> -->
+
+
+        </div>
+
+    </footer>
+
+    <div id="com-logo">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/money.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/m.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/rese.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/paypal.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/visa.png">
+
+
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/a.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/ww.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/jcb.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/dic.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/ya.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/d.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/qiwi.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/oxxo.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/webmoney.png">
+    </div>
+
+
+
+    <div id="com-logo2">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/bo.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/postepay.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/giropay.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/sofort.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/eps.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/p.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/banner/20180407_2974/pago.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/others/20190222_7819/Visa-Logo.png">
+        <img src="https://uidesign.gbtcdn.com/GB/image/others/20190222_7819/m-Logo.png">
+
+    </div>
+    <div id="copyright">
+        Copyright © 2014-2022 Gearbest.com. All Rights Reserved.
+    </div>
+
+</body>
+<!-- js part -->
+<script src="./start.js"></script>
+
+</html>

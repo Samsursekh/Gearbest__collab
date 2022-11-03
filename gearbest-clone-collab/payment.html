@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="gearBestIcon.jpg" type="image/icon type" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+    <style>
+          body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        .header {
+            padding: 22.5px 5%;
+        }
+
+        .header img {
+            width: 207px;
+            height: 45px;
+        }
+
+        hr {
+            opacity: 0.3;
+            margin: 0 auto;
+        }
+        .payment_card{
+            width: 450px;
+            height: 400px;
+            border: 1px solid white;
+            margin: 50px 5%;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            
+        }
+        
+        form>div{
+            display: flex;
+            /* border: 1px solid green; */
+            margin: 30px auto;
+        }
+        form p{
+            width: 100px;
+            /* border: 1px solid red; */
+            font-weight: 600;
+            font-size: 15px;
+            margin: auto;
+        }
+        form>div input{
+            width: 250px;
+            height: 30px;
+            margin: auto;
+            padding-left: 10px;
+        }
+        form>input{
+            width: 250px;
+            height: 35px;
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+            background-color:#ffda00;
+            border: 1px solid #ffda00;
+            border-radius: 5px;
+            margin-left: 18.75%;
+        }
+        form>input:hover{
+            cursor: pointer;
+            color: black;
+            border: 0.5px solid rgb(94, 80, 2, 0.3);
+        }
+
+        .payment_card > h3 {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="\">
+            <img src="https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png?imbypass=true"
+                height="50" alt="Gearbest">
+        </a>
+    </header>
+    
+    <hr>
+
+    <div class="payment_card">
+        <h3>Total Payment to be made:</h3>
+            
+       <form>
+        <div>
+            <p>Enter Name </p>
+            <input type="text" name="name" id="name" placeholder="Enter Name">
+        </div>
+        <div>
+            <p>Enter Card Number </p>
+            <input type="number" name="number" id="cardno" placeholder="Enter Card Number">
+        </div>
+        <div>
+            <p>Enter CVV </p>
+            <input type="password" name="cvv" id="cvv" placeholder="Enter CVV">
+        </div>
+
+        <div>
+            <p>Enter Expiry Date </p>
+            <input type="date" name="date" id="edate" placeholder="Enter Expiry Date">
+        </div>
+        <input type="submit" value="Pay" id="submit_button">
+       </form>
+    </div>
+    
+</body>
+</html>
+<script src="./scripts/payment.js">
+   
+   
+</script>
